@@ -9,7 +9,6 @@ import Membership from "./components/Membership";
 
 function App() {
   const [page, setPage] = useState(document.location.pathname || "/");
-  
 
   useEffect(() => {
     function handlePageLoad() {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/NavBar.css";
 
-const NavBar = ({ setPage, title }) => {
+const NavBar = ({ setPage }) => {
   const navRef = useRef();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,14 +14,23 @@ const NavBar = ({ setPage, title }) => {
     "/membership": "Join Membership",
   };
 
-
   useEffect(() => {
     const handlePageChange = (event) => {
-      if (event.target.tagName === "Li") {
+      const target = event.target.closest("a");
+      if (target) {
+        const newPath = target.getAttribute("href");
+
+        if (
+          newPath.startsWith("http") ||
+          target.getAttribute("target") === "_blank"
+        ) {
+          return;
+        }
+
         event.preventDefault();
-        window.history.pushState(null, "", event.target.pathname);
-        setPage(event.target.pathname);
-        setCurrentTitle(pageTitles[newPath] || "GalleryGlimpse"); 
+        window.history.pushState(null, "", newPath);
+        setPage(newPath);
+        setCurrentTitle(pageTitles[newPath] || "GalleryGlimpse");
       }
     };
 
@@ -31,7 +40,7 @@ const NavBar = ({ setPage, title }) => {
     return () => {
       navElement.removeEventListener("click", handlePageChange);
     };
-  }, [setPage, title]);
+  }, [setPage]);
 
   return (
     <header className="header">
@@ -58,8 +67,12 @@ const NavBar = ({ setPage, title }) => {
           <li>
             <a href="/membership">Become a Member</a>
           </li>
-          <li className="dropdown">
-            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+          <li
+            className="dropdown"
+            onMouseEnter={() => setIsDropdownOpen(true)}
+            onMouseLeave={() => setIsDropdownOpen(false)}
+          >
+            <button>
               Tools <span className="dropdown__icon">▼</span>
             </button>
 
