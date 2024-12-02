@@ -79,3 +79,7 @@ Image Credits:
 - Image Title: "c9.jpg"
   Source: https://unsplash.com/photos/focused-photo-of-a-short-hair-white-cat-on-orange-box-EcsCeS6haJ8
   License: https://unsplash.com/license
+
+- Image Title: "camera-girl.jpg"
+  Source: https://unsplash.com/photos/woman-using-nikon-dslr-camera-f3s0i96CRGQ
+  License: https://unsplash.com/license

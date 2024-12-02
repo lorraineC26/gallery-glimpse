@@ -1,13 +1,40 @@
-import { useState } from 'react'
-import './App.css'
+import { useState, useEffect } from "react";
+
+import "./styles/App.css";
+
+import NavBar from "./components/NavBar";
+import Home from "./components/Home";
+import Gallery from "./components/Gallery";
+import Membership from "./components/Membership";
 
 function App() {
+  const [page, setPage] = useState(document.location.pathname || "/");
+  
+
+  useEffect(() => {
+    function handlePageLoad() {
+      setPage(document.location.pathname);
+    }
+    window.addEventListener("popstate", handlePageLoad);
+
+    return () => {
+      window.removeEventListener("popstate", handlePageLoad);
+    };
+  }, []);
+
+  function renderPage() {
+    if (page === "/" || page === "/home") return <Home />;
+    if (page === "/gallery") return <Gallery setPage={setPage} />;
+    if (page === "/membership") return <Membership setPage={setPage} />;
+    return <p>404 - Page Not Found</p>;
+  }
 
   return (
     <>
-      
+      <NavBar setPage={setPage} />
+      <main>{renderPage()}</main>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
