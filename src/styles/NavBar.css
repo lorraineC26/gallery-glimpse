@@ -35,6 +35,11 @@
 
 .nav__menu a {
   color: var(--primary-text-color);
+  padding: 0.5rem;
+}
+
+.nav__menu a:hover, .nav__menu span:hover {
+  color: var(--qc-pink);
 }
 
 .dropdown {
