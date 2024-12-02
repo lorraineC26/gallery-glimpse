@@ -1,6 +1,7 @@
 .header__title {
   color: var(--heading-text-color);
   text-align: center;
+  text-decoration: overline;
 }
 
 .nav {
