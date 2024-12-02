@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Membership from "./components/Membership";
+import Footer from "./components/Footer";
 
 function App() {
   const [page, setPage] = useState(document.location.pathname || "/");
@@ -32,6 +33,7 @@ function App() {
     <>
       <NavBar setPage={setPage} />
       <main>{renderPage()}</main>
+      <Footer />
     </>
   );
 }

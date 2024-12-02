@@ -34,3 +34,18 @@ a {
 a:hover {
   color: var(--qc-pink);
 }
+
+/**************************/
+/* Footer */
+/**************************/
+footer {
+  padding-top: 0.5rem;
+  text-align: center;
+  width: 100%;
+}
+
+.footer__text {
+  color: var(--secondary-text-color);
+  font-size: 0.85rem;
+  padding: 5px 0;
+}
