@@ -1,11 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "../styles/Home.css";
 
 import landingPic from "../../public/camera-girl.jpg";
 
-const Home = () => {
+const Home = ({ setPage }) => {
+  const homeRef = useRef(null);
+
+  useEffect(() => {
+    const handlePageChange = (event) => {
+      if (event.target.tagName === "A") {
+        event.preventDefault();
+        window.history.pushState(null, "", event.target.pathname);
+        setPage(event.target.pathname);
+      }
+    };
+
+    const homeRefEl = homeRef.current;
+    homeRefEl.addEventListener("click", handlePageChange);
+
+    return () => {
+      homeRefEl.removeEventListener("click", handlePageChange);
+    };
+  }, []);
+
   return (
-    <div className="home-container">
+    <div className="home-container" ref={homeRef}>
       <img
         src={landingPic}
         alt="woman using Nikon DSLR camera"
@@ -23,6 +42,8 @@ const Home = () => {
           <div className="features__card">Customize details</div>
         </ul>
       </section>
+
+      <a href="/gallery">Let's get started!</a>
     </div>
   );
 };

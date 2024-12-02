@@ -22,9 +22,9 @@ function App() {
   }, []);
 
   function renderPage() {
-    if (page === "/" || page === "/home") return <Home />;
-    if (page === "/gallery") return <Gallery setPage={setPage} />;
-    if (page === "/membership") return <Membership setPage={setPage} />;
+    if (page === "/" || page === "/home") return <Home setPage={setPage} />;
+    if (page === "/gallery") return <Gallery />;
+    if (page === "/membership") return <Membership />;
     return <p>404 - Page Not Found</p>;
   }
 

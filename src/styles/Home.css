@@ -65,6 +65,10 @@
   text-align: center;
 }
 
+.home-container a {
+  margin-top: 0.75rem;
+}
+
 /**************************/
 /* For Larger Screens */
 /**************************/
