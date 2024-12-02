@@ -20,7 +20,7 @@
 
 .nav__menu {
   display: none;
-  flex-direction: column;
+
   gap: 0.5rem;
   list-style: none;
 }
@@ -28,21 +28,33 @@
 .nav__menu.open {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+
   background-color: var(--secondary-background-color);
   padding: 0.5rem;
   box-shadow: 7px 7px 10px rgb(238 236 236 / 19%);
 }
 
-.nav__menu a {
-  color: var(--primary-text-color);
+.nav__menu li {
   padding: 0.5rem;
 }
 
-.nav__menu a:hover, .nav__menu span:hover {
+.nav__menu a {
+  color: var(--primary-text-color);
+}
+
+.nav__menu a:hover,
+.dropdown button:hover {
   color: var(--qc-pink);
 }
 
-.dropdown {
+.dropdown button {
+  background: transparent;
+  border: none;
+
+  font-size: 1rem;
+  color: var(--primary-text-color);
+
   cursor: pointer;
 }
 
@@ -76,6 +88,7 @@
   .nav__menu {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
     gap: 1rem;
   }
 

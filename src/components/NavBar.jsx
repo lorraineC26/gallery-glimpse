@@ -8,12 +8,20 @@ const NavBar = ({ setPage, title }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [currentTitle, setCurrentTitle] = useState("GalleryGlimpse");
 
+  const pageTitles = {
+    "/": "GalleryGlimpse",
+    "/gallery": "Gallery",
+    "/membership": "Join Membership",
+  };
+
+
   useEffect(() => {
     const handlePageChange = (event) => {
       if (event.target.tagName === "Li") {
         event.preventDefault();
         window.history.pushState(null, "", event.target.pathname);
         setPage(event.target.pathname);
+        setCurrentTitle(pageTitles[newPath] || "GalleryGlimpse"); 
       }
     };
 
@@ -50,11 +58,11 @@ const NavBar = ({ setPage, title }) => {
           <li>
             <a href="/membership">Become a Member</a>
           </li>
-          <li
-            className="dropdown"
-            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-          >
-            <span>Tools</span> <span className="dropdown__icon">▼</span>
+          <li className="dropdown">
+            <button onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
+              Tools <span className="dropdown__icon">▼</span>
+            </button>
+
             {isDropdownOpen && (
               <ul className="dropdown__content">
                 <li>
