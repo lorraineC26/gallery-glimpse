@@ -6,13 +6,13 @@ const NavBar = ({ setPage }) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [currentTitle, setCurrentTitle] = useState("GalleryGlimpse");
+  // const [currentTitle, setCurrentTitle] = useState("GalleryGlimpse");
 
-  const pageTitles = {
-    "/": "GalleryGlimpse",
-    "/gallery": "Gallery",
-    "/membership": "Join Membership",
-  };
+  // const pageTitles = {
+  //   "/": "GalleryGlimpse",
+  //   "/gallery": "Gallery",
+  //   "/membership": "Join Membership",
+  // };
 
   useEffect(() => {
     const handlePageChange = (event) => {
@@ -30,7 +30,7 @@ const NavBar = ({ setPage }) => {
         event.preventDefault();
         window.history.pushState(null, "", newPath);
         setPage(newPath);
-        setCurrentTitle(pageTitles[newPath] || "GalleryGlimpse");
+        // setCurrentTitle(pageTitles[newPath] || "GalleryGlimpse");
       }
     };
 
@@ -44,7 +44,9 @@ const NavBar = ({ setPage }) => {
 
   return (
     <header className="header">
-      <h1 className="header__title">{currentTitle}</h1>
+      <a href="/">
+        <h1 className="header__title">GalleryGlimpse</h1>
+      </a>
 
       <nav className="nav" ref={navRef}>
         {/* Hamburger Menu */}

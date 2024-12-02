@@ -4,6 +4,10 @@
   text-decoration: overline;
 }
 
+.header > a {
+  text-decoration: none;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
