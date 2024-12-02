@@ -21,6 +21,8 @@
   background-color: transparent;
   color: var(--heading-text-color);
   border: none;
+
+  position: relative;
 }
 
 .nav__menu {
@@ -38,6 +40,9 @@
   background-color: var(--secondary-background-color);
   padding: 0.5rem;
   box-shadow: 7px 7px 10px rgb(238 236 236 / 19%);
+
+  position: absolute;
+  top: 10%;
 }
 
 .nav__menu li {
