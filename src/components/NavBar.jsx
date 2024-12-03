@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/NavBar.css";
+import ThemeOption from "./ThemeOption";
 
 const NavBar = ({ setPage }) => {
   const navRef = useRef();
@@ -103,6 +104,12 @@ const NavBar = ({ setPage }) => {
           </li>
         </ul>
       </nav>
+
+      <div className="theme-options">
+        <span>Theme</span>
+        <ThemeOption theme="dark" />
+        <ThemeOption theme="light" />
+      </div>
     </header>
   );
 };

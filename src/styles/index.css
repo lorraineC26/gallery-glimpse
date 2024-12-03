@@ -36,6 +36,55 @@ a:hover {
 }
 
 /**************************/
+/* Theme */
+/**************************/
+[data-theme="dark"] {
+  --primary-background-color: #271c19;
+  --secondary-background-color: #55423d;
+  --tertiary-background-color: #140d0b;
+
+  --heading-text-color: #fffffe;
+  --primary-text-color: #fff3ec;
+  --secondary-text-color: #a7a9be;
+}
+
+[data-theme="light"] {
+  --primary-background-color: #f9f4ef;
+  --secondary-background-color: #fffffe;
+  --tertiary-background-color: #f0e7db;
+
+  --heading-text-color: #020826;
+  --primary-text-color: #716040;
+  --secondary-text-color: #a7a9be;
+}
+
+.theme-option {
+  height: 25px;
+  width: 25px;
+  border-width: 2.5px;
+  border-style: solid;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#theme-light {
+  background-color: #fffffe;
+  border-color: var(--secondary-text-color);
+}
+
+#theme-dark {
+  background-color: var(--qc-dark);
+  border-color: var(--secondary-text-color);
+}
+
+.theme-options {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+/**************************/
 /* Footer */
 /**************************/
 footer {

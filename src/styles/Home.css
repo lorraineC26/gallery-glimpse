@@ -26,7 +26,7 @@
   border-width: 3px;
   border-style: dashed solid;
 
-  background-color: var(--qc-dark);
+  background-color: var(--tertiary-background-color);
 }
 
 .features-container {
@@ -67,6 +67,7 @@
 
 .home-container a {
   margin-top: 0.75rem;
+  font-size: 1.25rem;
 }
 
 /**************************/

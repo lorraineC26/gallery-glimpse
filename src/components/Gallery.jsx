@@ -1,9 +1,12 @@
-import React from 'react'
+import React from "react";
+import "../styles/Gallery.css";
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
-  )
-}
+    <div className="gallery-container">
+      <h2>Gallery</h2>
+    </div>
+  );
+};
 
-export default Gallery
+export default Gallery;

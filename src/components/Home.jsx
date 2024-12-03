@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "../styles/Home.css";
 
-import landingPic from "../../public/camera-girl.jpg";
+import landingPic from "../assets/landing.jpg";
 
 const Home = ({ setPage }) => {
   const homeRef = useRef(null);
@@ -39,7 +39,7 @@ const Home = ({ setPage }) => {
         <ul className="features__list">
           <div className="features__card">Browse images</div>
           <div className="features__card">Mark favorites</div>
-          <div className="features__card">Customize details</div>
+          <div className="features__card">Make Stories</div>
         </ul>
       </section>
 
