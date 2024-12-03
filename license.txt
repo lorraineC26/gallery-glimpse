@@ -8,6 +8,10 @@ Image Credits:
   Source:https://css.gg/icon/menu
   License: https://github.com/astrit/css.gg/blob/main/LICENSE.md
 
+- Image Title: "close.svg"
+  Source: https://css.gg/icon/close
+  License: https://github.com/astrit/css.gg/blob/main/LICENSE.md
+
 - Image Title: "cat-lay-down.jpg"
   Source: https://unsplash.com/photos/orange-persian-cat-sleeping-9UUoGaaHtNE
   License: https://unsplash.com/license

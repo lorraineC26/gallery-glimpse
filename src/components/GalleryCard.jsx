@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/GalleryCard.css";
 
-const GalleryCard = ({ props }) => {
-  const { title, src, alt, description } = props;
+const GalleryCard = ({ photo, handleModalOpen }) => {
+  const { title, src, alt, description } = photo;
 
   return (
     <div className="card">
@@ -11,7 +11,9 @@ const GalleryCard = ({ props }) => {
         <h3 className="card__title">{title}</h3>
         <p className="card__desc">{description}</p>
       </div>
-      <button className="card__btn">View Details</button>
+      <button className="card__btn" onClick={() => handleModalOpen(photo)}>
+        View Details
+      </button>
     </div>
   );
 };
