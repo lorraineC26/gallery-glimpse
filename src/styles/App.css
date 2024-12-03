@@ -1,0 +1,9 @@
+/**************************/
+/* ANIMATION */
+/**************************/
+@media (prefers-reduced-motion: no-preference) {
+  /* Theme switch */
+  #root {
+    transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+  }
+}

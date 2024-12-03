@@ -29,6 +29,11 @@ function App() {
     return <p>404 - Page Not Found</p>;
   }
 
+  const selectedTheme = localStorage.getItem("theme");
+  if (selectedTheme) {
+    document.querySelector("body").setAttribute("data-theme", selectedTheme);
+  }
+
   return (
     <>
       <NavBar setPage={setPage} />

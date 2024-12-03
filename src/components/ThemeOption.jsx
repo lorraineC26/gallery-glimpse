@@ -3,6 +3,7 @@ import React from "react";
 const ThemeOption = ({ theme }) => {
   const setTheme = () => {
     document.querySelector("body").setAttribute("data-theme", theme);
+    localStorage.setItem("theme", theme);
   };
 
   return (
@@ -10,7 +11,7 @@ const ThemeOption = ({ theme }) => {
       className="theme-option"
       id={`theme-${theme}`}
       onClick={setTheme}
-     ></div>
+    ></div>
   );
 };
 
