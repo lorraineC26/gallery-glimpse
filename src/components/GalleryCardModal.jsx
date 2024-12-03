@@ -7,6 +7,7 @@ const GalleryCardModal = ({
   handleModalClose,
   selectedPhoto,
   updateComments,
+  toggleFavorite,
 }) => {
   const modalRef = useRef(null);
 
@@ -49,7 +50,7 @@ const GalleryCardModal = ({
       <p className="modal__description">{description}</p>
 
       {/* Fav Toggler */}
-      <button onClick={() => console.log("fav")} className="modal__fav-toggle">
+      <button onClick={toggleFavorite} className="modal__fav-toggle">
         {isFavorite ? "Remove from Favorite" : "Add to Favorite"}
       </button>
 

@@ -40,6 +40,26 @@ const Gallery = () => {
     }
   };
 
+  const toggleFavorite = () => {
+    if (selectedPhoto) {
+      const updatedPhotos = photos.map((photo) => {
+        if (photo.id === selectedPhoto.id) {
+          return {
+            ...photo,
+            isFavorite: !photo.isFavorite,
+          };
+        }
+        return photo;
+      });
+
+      setPhotos(updatedPhotos);
+      setSelectedPhoto({
+        ...selectedPhoto,
+        isFavorite: !selectedPhoto.isFavorite,
+      });
+    }
+  };
+
   return (
     <div className="gallery-container">
       <h2>Gallery</h2>
@@ -60,6 +80,7 @@ const Gallery = () => {
           selectedPhoto={selectedPhoto}
           handleModalClose={handleModalClose}
           updateComments={updateComments}
+          toggleFavorite={toggleFavorite}
         />
       )}
     </div>
