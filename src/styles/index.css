@@ -18,6 +18,7 @@
   --qc-orange: #ffc0ad;
   --qc-purple: #9656a1;
   --qc-dark: #140d0b;
+  --qc-light: #fffffe;
 }
 
 body {
@@ -33,6 +34,10 @@ a {
 }
 a:hover {
   color: var(--qc-pink);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--heading-text-color);
 }
 
 /**************************/
