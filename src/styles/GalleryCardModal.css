@@ -53,6 +53,7 @@
   color: var(--secondary-text-color);
   font-size: 0.85rem;
   font-style: italic;
+  align-self: flex-end;
 }
 
 .modal__description {
