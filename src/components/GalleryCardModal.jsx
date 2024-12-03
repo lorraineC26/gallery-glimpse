@@ -1,12 +1,28 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import "../styles/GalleryCardModal.css";
 import closeIcon from "../assets/close.svg";
 
-const GalleryCardModal = ({ isModalOpen, handleModalClose, selectedPhoto }) => {
+const GalleryCardModal = ({
+  isModalOpen,
+  handleModalClose,
+  selectedPhoto,
+  updateComments,
+}) => {
   const modalRef = useRef(null);
 
   const { title, src, alt, description, dateUploaded, isFavorite, comments } =
     selectedPhoto;
+
+  const [newComment, setNewComment] = useState("");
+
+  const handleCommentSubmit = (e) => {
+    e.preventDefault();
+
+    if (newComment.trim()) {
+      updateComments(newComment);
+      setNewComment("");
+    }
+  };
 
   useEffect(() => {
     if (isModalOpen) {
@@ -38,20 +54,32 @@ const GalleryCardModal = ({ isModalOpen, handleModalClose, selectedPhoto }) => {
       </button>
 
       {/* Comments Section */}
+      <div className="modal__comments">
+        <h4>Comments</h4>
+        {comments.length > 0 ? (
+          comments.map((comment, index) => (
+            <div key={index} className="modal__comment">
+              <p>{comment}</p>
+            </div>
+          ))
+        ) : (
+          <p>No comments yet. Be the first to leave a comment!</p>
+        )}
+      </div>
 
       {/* Comment Form */}
-      <form
-        className="modal__comment-form"
-        onSubmit={() => console.log("submit")}
-      >
+      <form className="modal__comment-form" onSubmit={handleCommentSubmit}>
         <label htmlFor="comment" className="modal__label">
           Drop some feelings:
         </label>
         <textarea
+          id="comment"
           name="comment"
           placeholder="So iconic..."
-          required
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)}
           className="modal__input"
+          required
         ></textarea>
         <button type="submit" className="modal__btn-submit">
           Submit
