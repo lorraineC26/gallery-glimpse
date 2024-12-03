@@ -46,6 +46,9 @@ a:hover {
   --heading-text-color: #fffffe;
   --primary-text-color: #fff3ec;
   --secondary-text-color: #a7a9be;
+
+  --button-background-color: #ffc0ad;
+  --button-text-color: #140d0b;
 }
 
 [data-theme="light"] {
@@ -56,6 +59,9 @@ a:hover {
   --heading-text-color: #020826;
   --primary-text-color: #716040;
   --secondary-text-color: #a7a9be;
+
+  --button-background-color: #8c7851;
+  --button-text-color: #fffffe;
 }
 
 .theme-option {

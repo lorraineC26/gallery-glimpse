@@ -7,7 +7,9 @@
   margin: 1rem;
   padding: 0.5rem;
 
-  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .card__title {
@@ -30,22 +32,24 @@
   text-overflow: ellipsis;
 }
 
-/* .card__btn {
-  color: #f4f2fa;
+.card__btn {
+  color: var(--button-text-color);
   font-size: 1rem;
 
-  background-color: #6541bf;
+  background-color: var(--button-background-color);
   border: none;
   border-radius: 0.5rem;
-  padding: 0.5rem;
+  padding: 4px;
 
   cursor: pointer;
+
+  align-self: flex-end;
 }
 
-.card__btn:focus {
-  outline: 2px solid #ff7f50;
-  box-shadow: 0 0 5px rgba(255, 127, 80, 0.5);
-} */
+.card__btn:hover {
+  background-color: var(--qc-pink);
+}
+ 
 
 /**************************/
 /* For Larger Screens */

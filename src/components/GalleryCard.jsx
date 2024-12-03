@@ -11,7 +11,7 @@ const GalleryCard = ({ props }) => {
         <h3 className="card__title">{title}</h3>
         <p className="card__desc">{description}</p>
       </div>
-      {/* <button className="card__btn">Learn More</button> */}
+      <button className="card__btn">View Details</button>
     </div>
   );
 };
