@@ -62,80 +62,25 @@ GalleryGlimpse is a responsive image browsing web app built with React, JavaScri
 
 ### Mobile View
 
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-home.png alt="home in dark mode on small screen" width="200px" style="display: inline;">
-</p>
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-member.png alt="membership" width="200px" style="display: inline;">
-</p>
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-hamburger_dropdown.png alt="hamburger menu" width="200px" style="display: inline;">
-</p>
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-gallery.png alt="gallery" width="200px" style="display: inline;">
-</p>
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-modal.png alt="modal" width="200px" style="display: inline;">
-</p>
-
-- light mode
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-sm-home.png alt="home in light mode" width="200px" style="display: inline;">
-</p>
-
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-sm-gallery.png alt="gallery in light mode" width="200px" style="display: inline;">
-</p>
-
-### Medium Screens
-
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png alt="gallery on medium screen" width="300px" style="display: inline;">
-</p>
-
-### Large Screens
-
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png alt="gallery on medium screen" width="500px" style="display: inline;">
-</p>
-
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-lg-gallery.png alt="gallery on large screen" width="500px" style="display: inline;">
-</p>
-
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-lg-modal.png alt="modal on large screen" width="500px" style="display: inline;">
-</p>
-
-<p>
-  <img src=https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-lg-member.png alt="membership on large screen" width="500px" style="display: inline;">
-</p>
-
-## Screenshots
-
-### Mobile View
-
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
   <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-home.png" alt="home in dark mode on small screen" width="200px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-member.png" alt="membership" width="200px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-hamburger_dropdown.png" alt="hamburger menu" width="200px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-gallery.png" alt="gallery" width="200px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-modal.png" alt="modal" width="200px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-sm-home.png" alt="home in light mode" width="200px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-sm-gallery.png" alt="gallery in light mode" width="200px" style="margin: 5px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-member.png" alt="membership" width="200px" style="margin: 8px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-hamburger_dropdown.png" alt="hamburger menu" width="200px" style="margin: 8px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-gallery.png" alt="gallery" width="200px" style="margin: 8px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-sm-modal.png" alt="modal" width="200px" style="margin: 8px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-sm-home.png" alt="home in light mode" width="200px" style="margin: 8px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-sm-gallery.png" alt="gallery in light mode" width="200px" style="margin: 8px;">
 </div>
 
 ### Medium Screens
 
-<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png" alt="gallery on medium screen" width="300px" style="margin: 5px;">
-</div>
+<img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png" alt="gallery on medium screen" width="300px" style="margin: 5px;">
 
 ### Large Screens
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png" alt="gallery on medium screen" width="500px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-lg-gallery.png" alt="gallery on large screen" width="500px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-lg-modal.png" alt="modal on large screen" width="500px" style="margin: 5px;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-lg-member.png" alt="membership on large screen" width="500px" style="margin: 5px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png" alt="gallery on medium screen" width="500px" style="margin: 10px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-lg-gallery.png" alt="gallery on large screen" width="500px" style="margin: 10px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-lg-modal.png" alt="modal on large screen" width="500px" style="margin: 10px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-lg-member.png" alt="membership on large screen" width="500px" style="margin: 10px;">
 </div>
