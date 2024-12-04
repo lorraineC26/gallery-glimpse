@@ -22,6 +22,8 @@ const GalleryCardModal = ({
     if (newComment.trim()) {
       updateComments(newComment);
       setNewComment("");
+    } else {
+      alert("Please enter a comment first");
     }
   };
 
