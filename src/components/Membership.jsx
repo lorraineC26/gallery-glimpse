@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/Membership.css";
 
-const Membership = () => {
+const Membership = ({ setPage }) => {
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -90,17 +90,15 @@ const Membership = () => {
 
     setErrors(newErrors);
 
-    // If no errors, redirect to success page
     if (Object.keys(newErrors).length === 0) {
-      console.log("Form submitted successfully!");
-      // window.history.pushState(null, '', '/confirmation');
-      // setPage('/confirmation');
+      window.history.pushState(null, "", "/confirmation");
+      setPage("/confirmation");
     }
   };
 
   return (
     <div className="membership-container">
-      <h2>Join Our Community Today</h2>
+      <h2>Join Our Community</h2>
 
       <form onSubmit={handleSubmit} className="membership-form">
         {/* First Name */}

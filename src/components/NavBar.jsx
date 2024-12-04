@@ -68,7 +68,7 @@ const NavBar = ({ setPage }) => {
             <a href="/gallery">Gallery</a>
           </li>
           <li>
-            <a href="/membership">Become a Member</a>
+            <a href="/membership">Membership</a>
           </li>
           <li
             className="dropdown"

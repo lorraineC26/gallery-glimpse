@@ -1,0 +1,21 @@
+.confirm-container h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.success-message {
+  line-height: 1.5;
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 1.25rem;
+}
+
+.success-message p {
+  margin: 1rem 0;
+}
+
+.success-message span,
+.success-message a {
+  font-weight: 600;
+  color: var(--qc-pink);
+}

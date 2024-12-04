@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Gallery from "./components/Gallery";
 import Membership from "./components/Membership";
+import Confirmation from "./components/Confirmation";
 import Footer from "./components/Footer";
 
 import { catPhotos } from "./mock/photos";
@@ -80,7 +81,8 @@ function App() {
           setSelectedPhoto={setSelectedPhoto}
         />
       );
-    if (page === "/membership") return <Membership />;
+    if (page === "/membership") return <Membership setPage={setPage} />;
+    if (page === "/confirmation") return <Confirmation />;
     return <p>404 - Page Not Found</p>;
   }
 
