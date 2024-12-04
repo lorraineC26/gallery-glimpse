@@ -161,6 +161,7 @@ const Membership = ({ setPage }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Enter your email"
+            autoComplete="email"
             className="membership-form__input"
           />
 
@@ -183,6 +184,7 @@ const Membership = ({ setPage }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Create a password"
+            autoComplete="new-password"
             className="membership-form__input"
           />
 
@@ -212,6 +214,7 @@ const Membership = ({ setPage }) => {
             onChange={handleChange}
             onBlur={handleBlur}
             placeholder="Confirm password"
+            autoComplete="new-password"
             className="membership-form__input"
           />
 
