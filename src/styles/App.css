@@ -1,3 +1,30 @@
+#root {
+  display: flex;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+main {
+  flex: 1;
+}
+
+/**************************/
+/* Footer */
+/**************************/
+footer {
+  padding-top: 0.5rem;
+  text-align: center;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footer__text {
+  color: var(--secondary-text-color);
+  font-size: 0.85rem;
+  padding: 5px 0;
+}
+
 /**************************/
 /* ANIMATION */
 /**************************/

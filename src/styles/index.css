@@ -22,6 +22,11 @@
   --qc-red: #f25042;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: var(--primary-background-color);
   color: var(--primary-text-color);
@@ -101,17 +106,3 @@ h6 {
   justify-content: center;
 }
 
-/**************************/
-/* Footer */
-/**************************/
-footer {
-  padding-top: 0.5rem;
-  text-align: center;
-  width: 100%;
-}
-
-.footer__text {
-  color: var(--secondary-text-color);
-  font-size: 0.85rem;
-  padding: 5px 0;
-}
