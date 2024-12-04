@@ -43,6 +43,12 @@ const NavBar = ({ setPage }) => {
     };
   }, [setPage]);
 
+  const handleBlur = (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      setIsDropdownOpen(false);
+    }
+  };
+
   return (
     <header className="header">
       <a href="/">
@@ -72,11 +78,12 @@ const NavBar = ({ setPage }) => {
           </li>
           <li
             className="dropdown"
-            onMouseEnter={() => setIsDropdownOpen(true)}
+            onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             onMouseLeave={() => setIsDropdownOpen(false)}
+            onBlur={handleBlur}
           >
             <button>
-              Tools <span className="dropdown__icon">▼</span>
+              External Tools <span className="dropdown__icon">▼</span>
             </button>
 
             {isDropdownOpen && (
