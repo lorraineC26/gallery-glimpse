@@ -7,11 +7,12 @@ const ThemeOption = ({ theme }) => {
   };
 
   return (
-    <div
+    <button
       className="theme-option"
       id={`theme-${theme}`}
       onClick={setTheme}
-    ></div>
+      aria-label={`${theme} theme`}
+    ></button>
   );
 };
 
