@@ -70,9 +70,9 @@ function App() {
   }, []);
 
   function renderPage() {
-    if (page === "/gallery-glimpse/" || page === "/gallery-glimpse/home")
+    if (page === "/" || page === "/home")
       return <Home setPage={setPage} />;
-    if (page === "/gallery-glimpse/gallery")
+    if (page === "/gallery")
       return (
         <Gallery
           updateComments={updateComments}
@@ -82,9 +82,9 @@ function App() {
           setSelectedPhoto={setSelectedPhoto}
         />
       );
-    if (page === "/gallery-glimpse/membership")
+    if (page === "/membership")
       return <Membership setPage={setPage} />;
-    if (page === "/gallery-glimpse/confirmation") return <Confirmation />;
+    if (page === "/confirmation") return <Confirmation />;
     return <p>404 - Page Not Found</p>;
   }
 

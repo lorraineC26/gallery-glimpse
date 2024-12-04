@@ -60,13 +60,13 @@ const NavBar = ({ setPage }) => {
         {/* Navigation Menu*/}
         <ul className={`nav__menu ${isMenuOpen ? "open" : ""}`}>
           <li>
-            <a href="/gallery-glimpse/">Home</a>
+            <a href="/">Home</a>
           </li>
           <li>
-            <a href="/gallery-glimpse/gallery">Gallery</a>
+            <a href="/gallery">Gallery</a>
           </li>
           <li>
-            <a href="/gallery-glimpse/membership">Membership</a>
+            <a href="/membership">Membership</a>
           </li>
           <li
             className="dropdown"
