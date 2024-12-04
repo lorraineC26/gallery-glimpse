@@ -2,7 +2,7 @@
 
 GalleryGlimpse is a responsive image browsing web app built with React, JavaScript, and pure CSS. It allows users to explore a collection of images, manage their favorites, and interact with detailed modals. The app also offers user registration and a theme switcher.
 
-It is deployed and accessible at: lorrainec26.github.io/gallery-glimpse/
+It is deployed and accessible at: https://lorrainec26.github.io/gallery-glimpse/
 
 ## Pages
 
