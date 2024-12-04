@@ -44,7 +44,7 @@ GalleryGlimpse is a responsive image browsing web app built with React, JavaScri
 
 2. Install dependencies:
    ```bash
-   cd galleryglimpse
+   cd gallery-glimpse
    npm install
    ```
 3. Start the app:
@@ -74,12 +74,15 @@ GalleryGlimpse is a responsive image browsing web app built with React, JavaScri
 
 ### Medium Screens
 
-<img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png" alt="gallery on medium screen" width="300px" style="margin: 5px;">
+<div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png" alt="gallery on medium screen" width="300px" style="margin: 10px;">
+  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png" alt="gallery on medium screen" width="500px" style="margin: 10px;">
+</div>
 
 ### Large Screens
 
 <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-  <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-md-gallery.png" alt="gallery on medium screen" width="500px" style="margin: 10px;">
+
   <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-lg-gallery.png" alt="gallery on large screen" width="500px" style="margin: 10px;">
   <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/w-lg-modal.png" alt="modal on large screen" width="500px" style="margin: 10px;">
   <img src="https://github.com/lorraineC26/gallery-glimpse/blob/main/public/app-screenshots/b-lg-member.png" alt="membership on large screen" width="500px" style="margin: 10px;">
