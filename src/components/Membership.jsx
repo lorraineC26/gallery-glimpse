@@ -28,48 +28,65 @@ const Membership = () => {
       ...prevData,
       [name]: type === "checkbox" ? checked : value,
     }));
+
+    // Clear error message when typing
+    if (value.trim() !== "") {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        [name]: "",
+      }));
+    }
+  };
+
+  const handleBlur = (e) => {
+    const { name, value } = e.target;
+    const newErrors = { ...errors };
+
+    switch (name) {
+      case "firstName":
+        if (!value.trim()) newErrors.firstName = "First Name is required";
+        break;
+      case "lastName":
+        if (!value.trim()) newErrors.lastName = "Last Name is required";
+        break;
+      case "email":
+        if (!value.trim()) newErrors.email = "Email is required";
+        else if (!/\S+@\S+\.\S+/.test(formData.email))
+          newErrors.email = "Please enter a valid email";
+        break;
+      case "password":
+        if (!value.trim()) newErrors.password = "Password is required";
+        else if (value.length < 6 || value.length > 16)
+          newErrors.password = "Password must be between 6 and 16 characters";
+        break;
+      case "passwordConfirmation":
+        if (value !== formData.password)
+          newErrors.passwordConfirmation =
+            "Password confirmation must match the password";
+        break;
+      case "newsFreq":
+        if (formData.newsletter && !value)
+          newErrors.newsFreq = "Please select a frequency for the newsletter";
+        break;
+      default:
+        break;
+    }
+    setErrors(newErrors);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const newErrors = {};
 
-    // First Name validation
-    if (!formData.firstName) {
-      newErrors.firstName = "First name is required";
-    }
-
-    // Last Name validation
-    if (!formData.lastName) {
-      newErrors.lastName = "Last name is required";
-    }
-
-    // Email validation
-    if (!formData.email) {
-      newErrors.email = "Email is required";
-    } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-      newErrors.email = "Please enter a valid email";
-    }
-
-    // Password validation
-    if (!formData.password) {
-      newErrors.password = "Password is required";
-    } else if (formData.password.length < 6 || formData.password.length > 16) {
-      newErrors.password = "Password must be between 6 and 16 characters";
-    }
-
-    // Password Confirmation validation
-    if (!formData.passwordConfirmation) {
-      newErrors.passwordConfirmation = "Please confirm your password";
-    } else if (formData.password !== formData.passwordConfirmation) {
-      newErrors.passwordConfirmation =
-        "Password confirmation must match the password";
-    }
-
-    // Newsletter frequency validation
-    if (formData.newsletter && !formData.newsFreq) {
-      newErrors.newsFreq = "Please select a newsletter frequency";
-    }
+    if (!formData.firstName.trim())
+      newErrors.firstName = "First Name is required";
+    if (!formData.lastName.trim()) newErrors.lastName = "Last Name is required";
+    if (!formData.email.trim()) newErrors.email = "Email is required";
+    if (!formData.password.trim()) newErrors.password = "Password is required";
+    if (!formData.passwordConfirmation.trim())
+      newErrors.passwordConfirmation = "Password confirmation is required";
+    if (formData.newsletter && !formData.newsFreq)
+      newErrors.newsFreq = "Please select a frequency for the newsletter";
 
     setErrors(newErrors);
 
@@ -99,6 +116,7 @@ const Membership = () => {
             name="firstName"
             value={formData.firstName}
             onChange={handleChange}
+            onBlur={handleBlur}
             placeholder="Enter your first name"
             className="membership-form__input"
           />
@@ -121,6 +139,7 @@ const Membership = () => {
             name="lastName"
             value={formData.lastName}
             onChange={handleChange}
+            onBlur={handleBlur}
             placeholder="Enter your last name"
             className="membership-form__input"
           />
@@ -142,6 +161,7 @@ const Membership = () => {
             name="email"
             value={formData.email}
             onChange={handleChange}
+            onBlur={handleBlur}
             placeholder="Enter your email"
             className="membership-form__input"
           />
@@ -163,6 +183,7 @@ const Membership = () => {
             name="password"
             value={formData.password}
             onChange={handleChange}
+            onBlur={handleBlur}
             placeholder="Create a password"
             className="membership-form__input"
           />
@@ -191,6 +212,7 @@ const Membership = () => {
             name="passwordConfirmation"
             value={formData.passwordConfirmation}
             onChange={handleChange}
+            onBlur={handleBlur}
             placeholder="Confirm password"
             className="membership-form__input"
           />
@@ -231,6 +253,7 @@ const Membership = () => {
               name="newsFreq"
               value={formData.newsFreq}
               onChange={handleChange}
+              onBlur={handleBlur}
               className="membership-form__select"
             >
               <option value="">Select Frequency</option>
