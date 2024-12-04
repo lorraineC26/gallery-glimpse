@@ -1,0 +1,68 @@
+.membership-container h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.membership-form {
+  margin: 0 auto;
+  max-width: 400px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.membership-form__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.checkbox-field {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+}
+
+.membership-form__label {
+  font-weight: 500;
+}
+
+.membership-form__required {
+  color: var(--qc-pink);
+  font-style: italic;
+  font-size: 0.85rem;
+}
+
+.membership-form__input,
+.membership-form__select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--qc-dark);
+}
+
+.password-rules {
+  margin-left: 1rem;
+  margin-top: 2px;
+
+  font-size: 0.8rem;
+  color: var(--secondary-text-color);
+}
+
+.membership-form__error {
+  color: var(--qc-red);
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
+.membership-form__btn-submit {
+  color: var(--button-text-color);
+  font-size: 1rem;
+  width: max-content;
+
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 4px;
+
+  align-self: flex-end;
+}
