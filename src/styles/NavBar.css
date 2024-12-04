@@ -51,6 +51,7 @@
 
 .nav__menu a {
   color: var(--primary-text-color);
+  text-decoration: none;
 }
 
 .nav__menu a:hover,

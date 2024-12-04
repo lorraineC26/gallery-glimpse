@@ -7,14 +7,7 @@ const NavBar = ({ setPage }) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  // const [currentTitle, setCurrentTitle] = useState("GalleryGlimpse");
-
-  // const pageTitles = {
-  //   "/": "GalleryGlimpse",
-  //   "/gallery": "Gallery",
-  //   "/membership": "Join Membership",
-  // };
-
+  
   useEffect(() => {
     const handlePageChange = (event) => {
       const target = event.target.closest("a");
@@ -31,7 +24,6 @@ const NavBar = ({ setPage }) => {
         event.preventDefault();
         window.history.pushState(null, "", newPath);
         setPage(newPath);
-        // setCurrentTitle(pageTitles[newPath] || "GalleryGlimpse");
       }
     };
 
