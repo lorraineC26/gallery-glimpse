@@ -7,7 +7,7 @@ const NavBar = ({ setPage }) => {
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  
+
   useEffect(() => {
     const handlePageChange = (event) => {
       const target = event.target.closest("a");
@@ -41,13 +41,19 @@ const NavBar = ({ setPage }) => {
     }
   };
 
+  const handleHamBlur = (event) => {
+    if (!event.currentTarget.contains(event.relatedTarget)) {
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <header className="header">
       <a href="/">
         <h1 className="header__title">GalleryGlimpse</h1>
       </a>
 
-      <nav className="nav" ref={navRef}>
+      <nav className="nav" ref={navRef} onBlur={handleHamBlur}>
         {/* Hamburger Menu */}
         <button
           className="nav__mobile-toggle"
