@@ -43,7 +43,7 @@ const NavBar = ({ setPage }) => {
 
   return (
     <header className="header">
-      <a href="/">
+      <a href="/gallery-glimpse/">
         <h1 className="header__title">GalleryGlimpse</h1>
       </a>
 

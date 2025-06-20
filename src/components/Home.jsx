@@ -43,7 +43,7 @@ const Home = ({ setPage }) => {
         </ul>
       </section>
 
-      <a href="/gallery">Let's get started!</a>
+      <a href="/gallery-glimpse/gallery">Let's get started!</a>
     </div>
   );
 };

@@ -51,7 +51,7 @@ It is deployed and accessible at: https://lorrainec26.github.io/gallery-glimpse/
    ```
 3. Start the app:
    ```bash
-   npm start
+   npm run dev
    ```
 
 ## Tech Stacks
